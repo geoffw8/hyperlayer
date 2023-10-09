@@ -20,19 +20,58 @@ This is just the beginning.
 ## Watch the video
 [![Introduction to Hyperlayer](http://img.youtube.com/vi/9iZkE8ZrFMU/0.jpg)](http://www.youtube.com/watch?v=9iZkE8ZrFMU "Introduction to Hyperlayer")
 
-* [What is Hyperlayer?](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=00m08s) (00:08)
-* [Why Hyperlayer?](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=04m40s) (04:40)
-* [Meet the demo app](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=05m31s) (05:31)
-* [Debugging with Hyperlayer - Viewing spec runs](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=09m34s) (09:34)
-* [Debugging with Hyperlayer - Application flow & state](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=10m39s) (10:39)
-* [Debugging with Hyperlayer - Code view](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=17m56s) (17:56)
-* [We’ve fixed our bug](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=25m37s) (25:37)
-* [Closing notes](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=27m47s) (27:47)
+* [What is Hyperlayer? (00:08)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=00m08s)
+* [Why Hyperlayer? (04:40)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=04m40s)
+* [Meet the demo app (05:31)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=05m31s)
+* [Debugging with Hyperlayer - Viewing spec runs (09:34)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=09m34s)
+* [Debugging with Hyperlayer - Application flow & state (10:39)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=10m39s)
+* [Debugging with Hyperlayer - Code view (17:56)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=17m56s)
+* [We’ve fixed our bug (25:37)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=25m37s)
+* [Closing notes (27:47)](https://www.youtube.com/watch?v=9iZkE8ZrFMU&t=27m47s)
 
-## Code coming soon
+## Getting setup
 
-Both the gem and the client application will be online very soon. Tidying up required!
+### Installation
+
+Add the gem to your Gemfile
+
+```
+gem 'hyperlayer'
+```
+
+A few tables are added to handle Hyperlayer objects so `bundle exec rake db:migrate`
+
+Add in your `spec_helper.rb` please add:
+
+```
+RSpec.configure do |config|
+  # Add this block
+  config.around(:each) do |example|
+    trace = Hyperlayer::Tracer.setup_trace
+    trace.enable
+
+    example.run
+
+    trace.disable
+  end
+
+  ...
+end
+```
+
+Finally mount the UI by adding this to your `routes.rb`:
+
+```
+mount Hyperlayer::Engine => '/hyperlayer'
+```
+
+### Using the app
+
+To use Hyperlayer run your app locally and then visit `http://localhost:3000` (or wherever you mounted HyperLayer)
+
+Then simply select the process you want to view the spec for! For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
 ## Author
 
-- [@geoffw8](https://www.github.com/geoffw8)
-- [Geoff Wright](https://www.linkedin.com/in/geoffw8)
+I'm [Geoff Wright](https://www.github.com/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
+
+This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!

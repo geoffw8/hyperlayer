@@ -69,7 +69,7 @@ Note: You must have Redis installed and running locally.
 
 ### Using Hyperlayer
 
-Once you have completed the above, running a spec will cause the emits to be emitted to Redis.
+Once you have completed the above, running a spec will cause the events to be emitted to Redis.
 
 In order to listen to/process the events you must run:
 ```ruby

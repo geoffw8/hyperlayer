@@ -67,7 +67,7 @@ mount Hyperlayer::Engine => '/hyperlayer'
 
 Note: You must have Redis installed and running locally.
 
-### Using Hyperlayer
+### Using the app
 
 Once you have completed the above, running a spec will cause the events to be emitted to Redis.
 
@@ -75,18 +75,18 @@ In order to listen to/process the events, the following must be running:
 ```ruby
 rake hyperlayer:listen
 ```
-You should see events coming in as they are processed. Note: Events aren't stored in Redis, simply streamed through, so the rake task must be running _before_ you run your spec.
+You should see events coming in as they are processed.
 
 Now simply load `http://localhost:3000/hyperlayer`.
 
 For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
-
 ## Feedback
 > @Geoff this is  the future, like how git changed collaboration, this is going to change debugging - it's amazing
 — [Badr Tazi](https://github.com/btazi)
 
 This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!
-
 ## Author
 
-I'm [Geoff Wright](https://www.linkedin.com/in/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
+I'm [Geoff Wright](https://www.github.com/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
+
+This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!

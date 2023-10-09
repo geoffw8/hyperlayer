@@ -1,0 +1,52 @@
+<div class="row mt-2">
+  <div class="col-4">
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Method</th>
+          <th scope="col">Type</th>
+          <th scope="col">Value</th>
+          <th scope="col">Line #</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% path.events.distinct.order(line_number: :asc).each do |event| %>
+          <tr>
+            <td><%= event.method %></td>
+            <td><%= event.event_type %></td>
+            <td>
+              <code class='small text-wrap'>
+                <%= event.return_value %>
+              </code>
+            </td>
+            <td><%= event.line_number %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <div class="col-4">
+    <div class="card mb-4">
+      <div class="card-header">
+        <%= path.path.split('/')[5..-1].join('/') %> (<%= path.id %>)
+      </div>
+
+      <div class="card-body">
+        <pre><code class='language-ruby'><%= path.overlay.html_safe %></code></pre>
+      </div>
+    </div>
+  </div>
+  <div class="col-4">
+    <% if false %>
+      <div class="card mb-4">
+        <div class="card-header">
+          <%= path.path.split('/')[5..-1].join('/') %> (<%= path.id %>)
+        </div>
+
+        <div class="card-body">
+          <pre><code class='language-ruby'><%= path.overlay_code.html_safe %></code></pre>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

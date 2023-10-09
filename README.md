@@ -36,4 +36,3 @@ Both the gem and the client application will be online very soon. Tidying up req
 
 - [@geoffw8](https://www.github.com/geoffw8)
 - [Geoff Wright](https://www.linkedin.com/in/geoffw8)
-

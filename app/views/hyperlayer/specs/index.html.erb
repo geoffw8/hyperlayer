@@ -1,0 +1,24 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Spec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @specs.each do |spec| %>
+            <tr>
+              <td>
+                <%= link_to(spec.description, run_spec_example_groups_path(@run, spec)) %><br />
+                <%= spec.location %><br />
+                <%= spec.example_groups.count %> example groups
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

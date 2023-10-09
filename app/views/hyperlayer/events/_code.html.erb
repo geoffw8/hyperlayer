@@ -1,0 +1,36 @@
+<div class="card node">
+  <div class="card-header">
+    <div class="font-monospace text-body-secondary text-uppercase small">
+      <%= event.defined_class %>
+    </div>
+    <div>
+      #<%= event.method %>
+    </div>
+    <hr />
+    <div class="font-monospace text-body-secondary text-uppercase small">
+      <%= event.arguments %>
+    </div>
+  </div>
+
+  <div class="card-body">
+    <pre>
+      <code class="language-ruby">
+  <%= SplitMethods.call(event) %>
+      </code>
+    </pre>
+
+    <% if false %>
+      <pre style='text-wrap: wrap;'>
+      <code>
+          <%= event.variables %>
+      </code>
+      </pre>
+    <% end %>
+
+    <pre style='text-wrap: wrap;'>
+    <code>
+  <%= event.return_value_events&.return_value.presence || 'nil' %>
+    </code>
+    </pre>
+  </div>
+</div>

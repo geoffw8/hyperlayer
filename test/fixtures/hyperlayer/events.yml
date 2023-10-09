@@ -1,0 +1,27 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  location: MyString
+  defined_class: MyString
+  event_type: MyString
+  method: MyString
+  return_value: MyText
+  path_id: 1
+  line_number: 1
+  spec: 
+  example_group_id: 1
+  arguments: 
+  variables: 
+
+two:
+  location: MyString
+  defined_class: MyString
+  event_type: MyString
+  method: MyString
+  return_value: MyText
+  path_id: 1
+  line_number: 1
+  spec: 
+  example_group_id: 1
+  arguments: 
+  variables: 

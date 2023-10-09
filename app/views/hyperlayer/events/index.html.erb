@@ -1,0 +1,41 @@
+<div class="container">
+  <div class='row'>
+    <div class="col">
+      <%= render 'tree-text', branches: @tree %>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <%= render 'tree', branches: @tree %>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Understood</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', (event) => {
+    document.getElementById('staticBackdrop').addEventListener('shown.bs.modal', function (event) {
+      var triggerElement = event.relatedTarget; // Element that triggered the modal
+      var anchorId = triggerElement.getAttribute('data-bs-anchor'); // Get the data-anchor attribute
+      var modalBody = this.querySelector('.modal-body');
+      var anchor = document.getElementById(anchorId);
+      if (anchor) {
+        setTimeout(() => {
+          anchor.scrollIntoView({ behavior: 'smooth' });
+        }, 100);
+      }
+    });
+  });
+</script>

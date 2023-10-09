@@ -1,0 +1,15 @@
+<% branches.each do |branch| %>
+  <div class="tree-node">
+    <% branch.each do |event, sub_branches| %>
+      <div class="node-content" id="<%= "#{event.defined_class}::#{event.method}" %>">
+        <div class="node-code">
+          <%= render "code", event: event %>
+        </div>
+      </div>
+
+      <% if sub_branches.present? %>
+        <%= render partial: 'tree', locals: { branches: sub_branches } %>
+      <% end %>
+    <% end %>
+  </div>
+<% end %>

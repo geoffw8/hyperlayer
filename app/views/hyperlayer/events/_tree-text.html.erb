@@ -1,0 +1,22 @@
+<% branches.each do |branch| %>
+  <ul>
+    <% branch.each do |event, sub_branches| %>
+      <li>
+        <div class='text-muted' style='font-size: 12px'><%= event.defined_class %></div>
+
+        <% if true %>
+          <a href="#" data-bs-toggle="modal" data-bs-target="#staticBackdrop" data-bs-anchor="<%= "#{event.defined_class}::#{event.method}" %>" class="noStyle">#<%= event.method %></a>
+        <% else %>
+          <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" data-bs-anchor="<%= "#{event.defined_class}::#{event.method}" %>" class="noStyle">#<%= event.method %></a>
+        <% end %>
+
+        <code><%= event.arguments %></code><br />
+        <code>&rarr; <%= event.return_value_events&.return_value.presence %></code>
+      </li>
+
+      <% if sub_branches.present? %>
+        <%= render partial: 'tree-text', locals: { branches: sub_branches } %>
+      <% end %>
+    <% end %>
+  </ul>
+<% end %>

@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Spec</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @runs.each do |run| %>
+            <tr>
+              <td>
+                <%= link_to(run.process, run_specs_path(run)) %><br />
+                <%= run.specs.count %> specs
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

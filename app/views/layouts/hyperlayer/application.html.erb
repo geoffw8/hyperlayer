@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hyperlayer</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'hyperlayer/application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'hyperlayer/app', media: 'all', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://unpkg.com/prismjs@1.29.0/themes/prism.css" rel="stylesheet" />
+    <link href="https://unpkg.com/prismjs@1.29.0/plugins/line-highlight/prism-line-highlight.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <%= render 'layouts/nav' %>
+
+    <div class="container-fluid mt-4">
+      <div class="row align-items-start">
+        <%= yield %>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/prismjs@1.29.0/prism.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/plugins/autoloader/prism-autoloader.js"></script>
+    <script src="https://unpkg.com/prismjs@1.29.0/plugins/line-highlight/prism-line-highlight.js"></script>
+  </body>
+</html>

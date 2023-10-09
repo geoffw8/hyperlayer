@@ -1,0 +1,25 @@
+<div class="container-fluid">
+  <div class="row mt-2">
+    <div class="col-12">
+      <h5><%= @spec.location %></h5>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Example Groups</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @example_groups.each do |example_group| %>
+            <tr>
+              <td>
+                <%= link_to(example_group.description, run_spec_example_group_events_path(@run, params[:spec_id], example_group)) %><br />
+                <%= example_group.location %>
+              </td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

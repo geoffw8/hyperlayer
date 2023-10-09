@@ -1,0 +1,47 @@
+.card-header {
+  background-color: #fff;
+}
+
+.node {
+  margin-bottom: 10px;
+}
+
+.node .card-body {
+  padding: 0;
+}
+
+.return_value pre {
+  padding: 0;
+  margin: 20px 0;
+}
+
+.node .card-body pre {
+  margin: 0;
+}
+
+/* Next */
+
+.tree-node {
+  margin-left: 15px;
+}
+
+a.noStyle {
+  color: inherit; /* Inherit the color from the parent element (usually body text color) */
+  text-decoration: none; /* Remove the underline */
+  background-color: transparent; /* Ensure that there is no background color */
+}
+
+/* Custom CSS to remove padding and margin from Bootstrap card */
+hr.no-padding-margin {
+  margin: 0 !important;
+  border-radius: 0 !important; /* Optional: if you want to remove the border-radius as well */
+}
+
+.no-padding-margin .card {
+  margin: 10px 0 0 !important;
+  border-radius: 0 !important; /* Optional: if you want to remove the border-radius as well */
+}
+
+.no-padding-margin .card-body {
+  padding: 0 !important;
+}

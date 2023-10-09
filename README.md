@@ -67,7 +67,7 @@ mount Hyperlayer::Engine => '/hyperlayer'
 
 ### Using the app
 
-To use Hyperlayer run your app locally and then visit `http://localhost:3000` (or wherever you mounted HyperLayer)
+To use Hyperlayer run your app locally and then visit `http://localhost:3000/hyperlayer` (or wherever you mounted HyperLayer)
 
 Then simply select the process you want to view the spec for! For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
 ## Author

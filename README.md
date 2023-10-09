@@ -39,9 +39,9 @@ Add the gem to your Gemfile
 gem 'hyperlayer'
 ```
 
-A few tables are added to handle Hyperlayer objects so `bundle exec rake db:migrate`
+Hyperlayer adds a few tables so `bundle exec rake db:migrate`
 
-Add in your `spec_helper.rb` please add:
+In your `spec_helper.rb` add:
 
 ```
 RSpec.configure do |config|

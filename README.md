@@ -82,6 +82,6 @@ Now simply load `http://localhost:3000/hyperlayer`.
 For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
 ## Author
 
-I'm [Geoff Wright](https://www.github.com/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
+I'm [Geoff Wright](https://www.linkedin.com/in/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
 
 This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!

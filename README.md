@@ -82,7 +82,7 @@ Now simply load `http://localhost:3000/hyperlayer`.
 For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
 
 ## Feedback
-> @Geoff this is  the future, like how git changed collaboration, this is going to change debugging it's amazing
+> @Geoff this is  the future, like how git changed collaboration, this is going to change debugging - it's amazing
 — [Badr Tazi](https://github.com/btazi)
 
 This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!

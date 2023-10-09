@@ -35,7 +35,7 @@ This is just the beginning.
 
 Add the gem to your Gemfile
 
-```
+```ruby
 gem 'hyperlayer'
 ```
 
@@ -43,7 +43,7 @@ Hyperlayer adds a few tables so `bundle exec rake db:migrate`
 
 In your `spec_helper.rb` add:
 
-```
+```ruby
 RSpec.configure do |config|
   # Add this block
   config.around(:each) do |example|
@@ -61,7 +61,7 @@ end
 
 Finally mount the UI by adding this to your `routes.rb`:
 
-```
+```ruby
 mount Hyperlayer::Engine => '/hyperlayer'
 ```
 
@@ -72,7 +72,7 @@ Note: You must have Redis installed and running locally.
 Once you have completed the above, running a spec will cause the emits to be emitted to Redis.
 
 In order to listen to/process the events you must run:
-```
+```ruby
 rake hyperlayer:listen
 ```
 You should see events coming in as they are processed.

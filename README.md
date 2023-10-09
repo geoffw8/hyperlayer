@@ -65,11 +65,21 @@ Finally mount the UI by adding this to your `routes.rb`:
 mount Hyperlayer::Engine => '/hyperlayer'
 ```
 
+Note: You must have Redis installed and running locally.
+
 ### Using the app
 
-To use Hyperlayer run your app locally and then visit `http://localhost:3000/hyperlayer` (or wherever you mounted HyperLayer)
+Once you have completed the above, running a spec will cause the emits to be emitted to Redis.
 
-Then simply select the process you want to view the spec for! For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
+In order to listen to/process the events you must run:
+```
+rake hyperlayer:listen
+```
+You should see events coming in as they are processed.
+
+Now simply load `http://localhost:3000/hyperlayer`.
+
+For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
 ## Author
 
 I'm [Geoff Wright](https://www.github.com/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.

@@ -80,8 +80,13 @@ You should see events coming in as they are processed. Note: Events aren't store
 Now simply load `http://localhost:3000/hyperlayer`.
 
 For better instructions I recommend you watch the video - choose one of the "Debugging with Hyperlayer" chapters above!
+
+## Feedback
+> @Geoff this is  the future, like how git changed collaboration, this is going to change debugging it's amazing
+— [Badr Tazi](https://github.com/btazi)
+
+This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!
+
 ## Author
 
 I'm [Geoff Wright](https://www.linkedin.com/in/geoffw8) - Co-Founder & Chief Technology Officer at [Tembo Money](https://tembomoney.com) - the only place in the UK you can view your true house buying budget.
-
-This is a PoC - so I'm super keen for any feedback. Please feel free to reach out!

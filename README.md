@@ -67,7 +67,7 @@ mount Hyperlayer::Engine => '/hyperlayer'
 
 Note: You must have Redis installed and running locally.
 
-### Using the app
+### Using Hyperlayer
 
 Once you have completed the above, running a spec will cause the emits to be emitted to Redis.
 
